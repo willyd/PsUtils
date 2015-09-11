@@ -1,4 +1,4 @@
-﻿. $PSScriptRoot/Invoke-BatchFile.ps1
+﻿gci $PSScriptRoot\lib\*.ps1 | % {. $_}
 
 Function Get-Path($target = "Machine") {
     return [System.Environment]::GetEnvironmentVariable("PATH", $target)    
