@@ -5,7 +5,7 @@ function Install-PsUtils {
     if (-not $Destination) {
         $Destination = $ModulePaths | Select-Object -Index 0
     }
-    $PsUtilsVersion = '0.1'
+    $PsUtilsVersion = '1.0'
     $DownloadUrl = "https://github.com/willyd/PsUtils/archive/v$($PsUtilsVersion).zip"
     $DownloadDest = $Destination + "\PsUtilsv$($PsUtilsVersion).zip"
     Write-Host "Downloading PsUtils from $DownloadUrl"
