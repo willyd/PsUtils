@@ -7,6 +7,7 @@ Function Get-Path($target = "Machine") {
 Function Add-ToPath($folder, $target = "Machine") {
     $path = Get-Path($target)
     [System.Environment]::SetEnvironmentVariable("PATH", "$path;$folder", $target)
+    $env:PATH += ";$folder"
 }
 
 Function Get-UserPath() {
